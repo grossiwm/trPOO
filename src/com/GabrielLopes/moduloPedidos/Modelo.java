@@ -9,6 +9,8 @@ public class Modelo {
 
     private String nome;
 
+    private Integer qntTecnicos;
+
     private Guidao guidao;
 
     private Roda roda;
@@ -17,8 +19,9 @@ public class Modelo {
 
     private Quadro quadro;
 
-    public Modelo(String nome, Guidao guidao, Roda roda, Selim selim, Quadro quadro) {
+    public Modelo(String nome, Integer qntTecnicos, Guidao guidao, Roda roda, Selim selim, Quadro quadro) {
         this.nome = nome;
+        this.qntTecnicos = qntTecnicos;
         this.guidao = guidao;
         this.roda = roda;
         this.selim = selim;
@@ -63,5 +66,13 @@ public class Modelo {
 
     public void setQuadro(Quadro quadro) {
         this.quadro = quadro;
+    }
+
+    public Integer getQntTecnicos() {
+        return qntTecnicos;
+    }
+
+    public void setQntTecnicos(Integer qntTecnicos) {
+        this.qntTecnicos = qntTecnicos;
     }
 }
