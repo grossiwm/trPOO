@@ -7,12 +7,12 @@ import com.GabrielLopes.moduloPedidos.peca.Quadro;
 import com.GabrielLopes.moduloPedidos.peca.Roda;
 import com.GabrielLopes.moduloPedidos.peca.Selim;
 import com.GabrielLopes.moduloProducao.FilaPedidos;
-import com.GabrielLopes.moduloRH.Funcionario;
 import com.GabrielLopes.moduloRH.Supervisor;
 import com.GabrielLopes.moduloRH.Tecnico;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.Map;
 
 public class LinhaProducao {
@@ -31,23 +31,28 @@ public class LinhaProducao {
                 Integer quantidadeModelo = (Integer) pair.getValue();
                 Modelo modelo = (Modelo) pair.getKey();
 
-                //Tecnicos
+                //Tecnicos:
+                //qntTecnicos: quantidade de técnicos necessária para produção do modelo de acordo com a especificação
+                //funcionarios: lista de funcionarios alocados pelo RH para produzir o modelo em questão
                 int qntTecnicos = modelo.getQntTecnicos();
-                ArrayList<Funcionario> funcionarios = getFuncionarios(qntTecnicos);
+                ArrayList<Tecnico> tecnicos = getTecnicos(qntTecnicos);
+
+                //Supervisor
+                Supervisor supervisor = getSupervisor();
 
                 //Verificação de estoque e Produção
                 if(verificaEstoqueGuidao() && verificaEstoqueQuadro() && verificaEstoqueRoda() && verificaEstoqueSelim()){
                     for(int i=0; i<quantidadeModelo; i++){
                         Produto novoProduto = new Produto(pedidoAtual.getIdPedido());
 
-                        produzModelo(modelo, novoProduto, funcionarios);
+                        produzModelo(modelo, novoProduto, tecnicos, supervisor);
 
                         //Testes
                         while(!testarProduto(novoProduto)){
                             System.out.println("Produto de id=" + novoProduto.getId_produto() + "do pedido de id="+ novoProduto.getId_pedido()+" não passou nos testes!\n" +
                                     "A produção será reinicializada.");
                             novoProduto = new Produto(pedidoAtual.getIdPedido());
-                            produzModelo(modelo, novoProduto, funcionarios);
+                            produzModelo(modelo, novoProduto, tecnicos, supervisor);
                         }
 
                         //Adicionando o novo produto ao estoque de produtos prontos
@@ -62,22 +67,16 @@ public class LinhaProducao {
     }
 
 
-    private void produzModelo(Modelo modelo, Produto produto, ArrayList<Funcionario> funcionarios) throws InterruptedException {
+    private void produzModelo(Modelo modelo, Produto produto, ArrayList<Tecnico> tecnicos, Supervisor supervisor) throws InterruptedException {
 
         //Alocar corpo técnico
         System.out.println("\n\nAlocando corpo técnico para o projeto "+modelo+" do pedido de id="+ produto.getId_pedido() +".\n");
-        for(Funcionario funcionario : funcionarios) {
-            try {
-                Tecnico tecnico = (Tecnico) funcionario;
-                System.out.println("Alocando técnico: "+tecnico);
-            } catch(ClassCastException ec) {
-                Supervisor supervisor = (Supervisor) funcionario;
-                System.out.println("Alocando supervisor: "+supervisor);
-            }
-            finally {
-                Thread.sleep(1000);
-            }
+        for(Tecnico tecnico : tecnicos) {
+            System.out.println("Alocando técnico: "+tecnico);
+            Thread.sleep(1000);
         }
+        System.out.println("Alocando supervisor: "+supervisor);
+        Thread.sleep(1000);
 
         //Inicialização da produção
         Thread.sleep(2000);
@@ -118,16 +117,19 @@ public class LinhaProducao {
         return true;
     }
 
-    private ArrayList<Funcionario> getFuncionarios(int qntTecnicos) {
+    public ArrayList<Tecnico> getTecnicos(int qntTecnicos) {
 
-        ArrayList<Funcionario> funcionarios = new ArrayList<Funcionario>();
+        ArrayList<Tecnico> tecnicos = new ArrayList<Tecnico>();
 
         for(int i = 0; i<qntTecnicos; i++){
             Tecnico tecnico = new Tecnico("Técnico "+i);
-            funcionarios.add(tecnico);
+            tecnicos.add(tecnico);
         }
-        funcionarios.add(new Supervisor("Fulano"));
-        return funcionarios;
+        return tecnicos;
+    }
+
+    public Supervisor getSupervisor(){
+        return new Supervisor("Supervisor Fulano");
     }
 
     private Boolean verificaEstoqueQuadro(){

@@ -15,6 +15,7 @@ import com.GabrielLopes.moduloProducao.services.LinhaProducao;
 
 import java.util.HashMap;
 
+
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
@@ -38,6 +39,8 @@ public class Main {
         Modelo modeloBMX = new Modelo("BMX", 2,guidaoBMX, roda26, selimPlastico, quadroBMX);
         Modelo modeloMB = new Modelo("Mountain Bike",3, guidaoMB, roda29, selimCouro, quadroMB);
 
+        // Esse objeto é usado para fazer a integração entre o setor de produção com os setores de pedido e projeto
+        //
         HashMap<Modelo,Integer> modeloQuantidades1 = new HashMap<>();
         modeloQuantidades1.put(modeloBMX, 2);
         modeloQuantidades1.put(modeloMB, 1);

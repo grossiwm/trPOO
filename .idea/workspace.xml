@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2460ab5-d2c4-4e1d-9b49-d6a64388a945" name="Default Changelist" comment="Implementação de polimorfismo na alocação de corpo técnico e instâncias na main">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GabrielLopes/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/moduloPedidos/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloPedidos/Modelo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/moduloPedidos/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloPedidos/Pedido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/moduloProducao/services/Estoque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloProducao/services/Estoque.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/moduloProducao/services/LinhaProducao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloProducao/services/LinhaProducao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/moduloProducao/services/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloProducao/services/Produto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/moduloRH/Tecnico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloRH/Tecnico.java" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +42,22 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -64,18 +76,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -90,6 +90,8 @@
       <workItem from="1575651499601" duration="16538000" />
       <workItem from="1576188166696" duration="12396000" />
       <workItem from="1576241976599" duration="14021000" />
+      <workItem from="1576260729669" duration="5663000" />
+      <workItem from="1576266433081" duration="254000" />
     </task>
     <task id="LOCAL-00001" summary="Implements HashMap in ModeloQuantidade and employers allocation feature.">
       <created>1576199228734</created>
