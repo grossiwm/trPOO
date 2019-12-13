@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2460ab5-d2c4-4e1d-9b49-d6a64388a945" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloRH/Funcionario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloRH/Supervisor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e2460ab5-d2c4-4e1d-9b49-d6a64388a945" name="Default Changelist" comment="Implementação de polimorfismo na alocação de corpo técnico e instâncias na main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/moduloPedidos/ModeloQuantidade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GabrielLopes/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/moduloPedidos/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloPedidos/Modelo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/moduloPedidos/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloPedidos/Pedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/moduloProducao/services/Estoque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloProducao/services/Estoque.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/moduloProducao/services/LinhaProducao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloProducao/services/LinhaProducao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/moduloProducao/services/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloProducao/services/Produto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/moduloRH/Tecnico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloRH/Tecnico.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,6 +58,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -83,8 +88,17 @@
       <updated>1575584825653</updated>
       <workItem from="1575584830408" duration="6563000" />
       <workItem from="1575651499601" duration="16538000" />
-      <workItem from="1576188166696" duration="10659000" />
+      <workItem from="1576188166696" duration="12396000" />
+      <workItem from="1576241976599" duration="14021000" />
     </task>
+    <task id="LOCAL-00001" summary="Implements HashMap in ModeloQuantidade and employers allocation feature.">
+      <created>1576199228734</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576199228734</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,11 +117,17 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implements HashMap in ModeloQuantidade and employers allocation feature." />
+    <MESSAGE value="Implementação de polimorfismo na alocação de corpo técnico e instâncias na main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementação de polimorfismo na alocação de corpo técnico e instâncias na main" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1576196802540">
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1576256257756">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1576196802540" />
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1576256257756" />
     <state x="811" y="408" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576188897355">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -116,21 +136,49 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576198678289" />
+    <state x="747" y="78" key="CommitChangelistDialog2" timestamp="1576258046190">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="747" y="78" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1576258046190" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1576188554097">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1576188554097" />
+    <state width="938" height="163" key="GridCell.Tab.0.bottom" timestamp="1576257638211">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="163" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1576257638211" />
+    <state width="938" height="163" key="GridCell.Tab.0.center" timestamp="1576257638211">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="163" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1576257638211" />
+    <state width="938" height="163" key="GridCell.Tab.0.left" timestamp="1576257638211">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="163" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1576257638211" />
+    <state width="938" height="163" key="GridCell.Tab.0.right" timestamp="1576257638211">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="163" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576257638211" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1576188561429">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1576188561429" />
-    <state x="661" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1576188184380">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1576257451405">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="661" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576188184380" />
-    <state x="601" y="246" width="700" height="530" key="recent.locations.popup" timestamp="1576190993224">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1576257451405" />
+    <state x="661" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1576241998830">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="601" y="246" width="700" height="530" key="recent.locations.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1576190993224" />
+    <state x="661" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576241998830" />
+    <state x="601" y="246" width="700" height="530" key="recent.locations.popup" timestamp="1576248212003">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="601" y="246" width="700" height="530" key="recent.locations.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1576248212003" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1576248696057">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1576248696057" />
   </component>
 </project>

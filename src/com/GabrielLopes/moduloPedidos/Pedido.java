@@ -4,6 +4,8 @@ import java.util.HashMap;
 
 public class Pedido {
 
+    private static Integer contadorIdPedido = 0;
+
     private Integer idPedido;
 
     private HashMap<Modelo,Integer> modeloQuantidades;
@@ -24,9 +26,10 @@ public class Pedido {
         this.idPedido = idPedido;
     }
 
-    public Pedido(Integer idPedido, HashMap<Modelo,Integer> modeloQuantidades) {
-        this.idPedido = idPedido;
+    public Pedido(HashMap<Modelo,Integer> modeloQuantidades) {
+        this.idPedido = this.contadorIdPedido;
         this.modeloQuantidades = modeloQuantidades;
+        contadorIdPedido++;
     }
 
 }

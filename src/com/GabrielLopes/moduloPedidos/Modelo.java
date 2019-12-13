@@ -75,4 +75,12 @@ public class Modelo {
     public void setQntTecnicos(Integer qntTecnicos) {
         this.qntTecnicos = qntTecnicos;
     }
+
+    @Override
+    public String toString() {
+        return "Modelo{" +
+                "nome='" + nome + '\'' +
+                '}';
+    }
+
 }

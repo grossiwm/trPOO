@@ -27,8 +27,8 @@ public class Produto{
 
     private ArrayList<Tecnico> listaTecnicos = new ArrayList<Tecnico>();
 
-    public Produto(Integer id_produto, Integer id_pedido) {
-        this.id_produto = id_produto;
+    public Produto(Integer id_pedido) {
+        this.id_produto = this.contadorIdProduto;
         this.id_pedido = id_pedido;
         contadorIdProduto++;
     }
