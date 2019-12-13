@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2460ab5-d2c4-4e1d-9b49-d6a64388a945" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloRH/Funcionario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloRH/Supervisor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/moduloPedidos/ModeloQuantidade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/moduloPedidos/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloPedidos/Pedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/moduloProducao/services/LinhaProducao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloProducao/services/LinhaProducao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/moduloRH/Tecnico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloRH/Tecnico.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +28,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1UaBSa4Gz3AoW2MrjbRd40z2HoV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -33,18 +45,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -58,6 +59,18 @@
       </method>
     </configuration>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -70,6 +83,7 @@
       <updated>1575584825653</updated>
       <workItem from="1575584830408" duration="6563000" />
       <workItem from="1575651499601" duration="16538000" />
+      <workItem from="1576188166696" duration="10659000" />
     </task>
     <servers />
   </component>
@@ -81,10 +95,42 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1576196802540">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1576196802540" />
+    <state x="811" y="408" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576188897355">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="811" y="408" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576188897355" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576198678289">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576198678289" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1576188554097">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1576188554097" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1576188561429">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1576188561429" />
+    <state x="661" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1576188184380">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="661" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576188184380" />
+    <state x="601" y="246" width="700" height="530" key="recent.locations.popup" timestamp="1576190993224">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="601" y="246" width="700" height="530" key="recent.locations.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1576190993224" />
   </component>
 </project>

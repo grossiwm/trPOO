@@ -1,18 +1,18 @@
 package com.GabrielLopes.moduloPedidos;
 
-import com.sun.tools.javac.util.List;
+import java.util.HashMap;
 
 public class Pedido {
 
     private Integer idPedido;
 
-    private List<ModeloQuantidade> modeloQuantidades;
+    private HashMap<Modelo,Integer> modeloQuantidades;
 
-    public List<ModeloQuantidade> getModeloQuantidades() {
+    public HashMap<Modelo, Integer> getModeloQuantidades() {
         return modeloQuantidades;
     }
 
-    public void setModeloQuantidades(List<ModeloQuantidade> modeloQuantidades) {
+    public void setModeloQuantidades(HashMap<Modelo, Integer> modeloQuantidades) {
         this.modeloQuantidades = modeloQuantidades;
     }
 
@@ -24,7 +24,7 @@ public class Pedido {
         this.idPedido = idPedido;
     }
 
-    public Pedido(Integer idPedido, List<ModeloQuantidade> modeloQuantidades) {
+    public Pedido(Integer idPedido, HashMap<Modelo,Integer> modeloQuantidades) {
         this.idPedido = idPedido;
         this.modeloQuantidades = modeloQuantidades;
     }
