@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2460ab5-d2c4-4e1d-9b49-d6a64388a945" name="Default Changelist" comment="Implementação de polimorfismo na alocação de corpo técnico e instâncias na main">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/producaoPOO/com/GabrielLopes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/producaoPOO/com/GabrielLopes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/producaoPOO/com/GabrielLopes/moduloProducao/FilaPedidos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/producaoPOO/com/GabrielLopes/moduloProducao/services/LinhaProducao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/producaoPOO/com/GabrielLopes/moduloProducao/services/LinhaProducao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/producaoPOO/com/GabrielLopes/moduloProducao/services/Produto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/producaoPOO/com/GabrielLopes/moduloProducao/services/Produto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GabrielLopes/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/moduloProducao/FilaPedidos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/moduloProducao/services/Estoque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloProducao/services/Estoque.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/moduloProducao/services/LinhaProducao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloProducao/services/LinhaProducao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GabrielLopes/moduloProducao/services/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GabrielLopes/moduloProducao/services/Produto.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +97,7 @@
       <workItem from="1576188166696" duration="12396000" />
       <workItem from="1576241976599" duration="14021000" />
       <workItem from="1576260729669" duration="5663000" />
-      <workItem from="1576266433081" duration="254000" />
+      <workItem from="1576266433081" duration="3495000" />
     </task>
     <task id="LOCAL-00001" summary="Implements HashMap in ModeloQuantidade and employers allocation feature.">
       <created>1576199228734</created>

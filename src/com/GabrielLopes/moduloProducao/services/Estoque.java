@@ -12,4 +12,20 @@ public class Estoque {
         Thread.sleep(3000);
         System.out.println("Produto de id="+produto.getId_produto()+" do pedido de id="+produto.getId_pedido()+" encaminhado para estoque.");
     }
+
+    public static Boolean verificaEstoqueQuadro(){
+        return true;
+    }
+
+    public static Boolean verificaEstoqueSelim(){
+        return true;
+    }
+
+    public static Boolean verificaEstoqueRoda(){
+        return true;
+    }
+
+    public static Boolean verificaEstoqueGuidao(){
+        return true;
+    }
 }

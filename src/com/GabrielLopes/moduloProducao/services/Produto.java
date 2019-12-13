@@ -4,9 +4,6 @@ import com.GabrielLopes.moduloPedidos.peca.Guidao;
 import com.GabrielLopes.moduloPedidos.peca.Quadro;
 import com.GabrielLopes.moduloPedidos.peca.Roda;
 import com.GabrielLopes.moduloPedidos.peca.Selim;
-import com.GabrielLopes.moduloRH.Tecnico;
-
-import java.util.ArrayList;
 
 
 public class Produto{
@@ -25,16 +22,10 @@ public class Produto{
 
     private Quadro quadro = null;
 
-    private ArrayList<Tecnico> listaTecnicos = new ArrayList<Tecnico>();
-
     public Produto(Integer id_pedido) {
         this.id_produto = this.contadorIdProduto;
         this.id_pedido = id_pedido;
         contadorIdProduto++;
-    }
-
-    public void setListaTecnicos(ArrayList<Tecnico> listaTecnicos) {
-        this.listaTecnicos = listaTecnicos;
     }
 
     public static Integer getContadorIdProduto() {

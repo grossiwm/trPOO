@@ -10,7 +10,6 @@ import com.GabrielLopes.moduloPedidos.peca.Guidao;
 import com.GabrielLopes.moduloPedidos.peca.Quadro;
 import com.GabrielLopes.moduloPedidos.peca.Roda;
 import com.GabrielLopes.moduloPedidos.peca.Selim;
-import com.GabrielLopes.moduloProducao.FilaPedidos;
 import com.GabrielLopes.moduloProducao.services.LinhaProducao;
 
 import java.util.HashMap;
@@ -20,7 +19,7 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
 
-        // Peças
+        // Instanciando as peças
         Guidao guidaoBMX = new Guidao(TipoGuidao.BMX);
         Guidao guidaoEletrico = new Guidao(TipoGuidao.ELETRICO);
         Guidao guidaoHidraulico = new Guidao(TipoGuidao.HIDRAULICO);
@@ -35,12 +34,10 @@ public class Main {
         Selim selimBorracha = new Selim(TipoSelim.BORRACHA);
         Selim selimPlastico = new Selim(TipoSelim.PLASTICO);
 
-        //Modelos
+        //Instanciando os modelos
         Modelo modeloBMX = new Modelo("BMX", 2,guidaoBMX, roda26, selimPlastico, quadroBMX);
         Modelo modeloMB = new Modelo("Mountain Bike",3, guidaoMB, roda29, selimCouro, quadroMB);
 
-        // Esse objeto é usado para fazer a integração entre o setor de produção com os setores de pedido e projeto
-        //
         HashMap<Modelo,Integer> modeloQuantidades1 = new HashMap<>();
         modeloQuantidades1.put(modeloBMX, 2);
         modeloQuantidades1.put(modeloMB, 1);
@@ -49,18 +46,16 @@ public class Main {
         modeloQuantidades2.put(modeloBMX, 1);
         modeloQuantidades2.put(modeloMB, 1);
 
-
         // Pedidos
         Pedido pedido1 = new Pedido(modeloQuantidades1);
         Pedido pedido2 = new Pedido(modeloQuantidades2);
 
-        FilaPedidos filaPedidos = new FilaPedidos();
-        filaPedidos.addPedido(pedido1);
-        filaPedidos.addPedido(pedido2);
+        LinhaProducao.addPedido(pedido1);
+        LinhaProducao.addPedido(pedido2);
 
         // Produção
         LinhaProducao linhaProducao = new LinhaProducao();
-        linhaProducao.produzir(filaPedidos);
+        linhaProducao.produzir();
 
     }
 }

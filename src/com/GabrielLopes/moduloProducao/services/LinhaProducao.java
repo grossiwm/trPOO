@@ -6,7 +6,6 @@ import com.GabrielLopes.moduloPedidos.peca.Guidao;
 import com.GabrielLopes.moduloPedidos.peca.Quadro;
 import com.GabrielLopes.moduloPedidos.peca.Roda;
 import com.GabrielLopes.moduloPedidos.peca.Selim;
-import com.GabrielLopes.moduloProducao.FilaPedidos;
 import com.GabrielLopes.moduloRH.Supervisor;
 import com.GabrielLopes.moduloRH.Tecnico;
 
@@ -17,37 +16,45 @@ import java.util.Map;
 
 public class LinhaProducao {
 
+    // Esse objeto é usado para fazer a integração entre o setor de produção e os setores de pedido e projeto
+    public static LinkedList<Pedido> filaDePedidos = new LinkedList<>();
+
     private Pedido pedidoAtual;
 
-    public void produzir(FilaPedidos filaPedidos) throws InterruptedException {
+    public void produzir() throws InterruptedException {
 
-        while(!filaPedidos.isVazia()) {
-            pedidoAtual = filaPedidos.getPedido();
+        //Loop para a fila de pedidos
+        while(!isFilaPedidosVazia()) {
+            pedidoAtual = getProxPedido();
 
+            //Destrinchando o par chave/valor para obter os modelos e suas respectivas quantidades para um dado pedido
             Iterator it = pedidoAtual.getModeloQuantidades().entrySet().iterator();
 
             while (it.hasNext()) {
-                Map.Entry pair = (Map.Entry) it.next();
-                Integer quantidadeModelo = (Integer) pair.getValue();
-                Modelo modelo = (Modelo) pair.getKey();
+
+                Map.Entry par = (Map.Entry) it.next();
+                Integer quantidadeModelo = (Integer) par.getValue();
+                Modelo modelo = (Modelo) par.getKey();
 
                 //Tecnicos:
                 //qntTecnicos: quantidade de técnicos necessária para produção do modelo de acordo com a especificação
-                //funcionarios: lista de funcionarios alocados pelo RH para produzir o modelo em questão
+                //tecnicos: lista de tecnicos alocados pelo RH para produzir o modelo em questão
                 int qntTecnicos = modelo.getQntTecnicos();
                 ArrayList<Tecnico> tecnicos = getTecnicos(qntTecnicos);
 
-                //Supervisor
+                //Supervisor alocado pelo RH
                 Supervisor supervisor = getSupervisor();
 
                 //Verificação de estoque e Produção
-                if(verificaEstoqueGuidao() && verificaEstoqueQuadro() && verificaEstoqueRoda() && verificaEstoqueSelim()){
+                if(Estoque.verificaEstoqueGuidao() && Estoque.verificaEstoqueQuadro() && Estoque.verificaEstoqueRoda() && Estoque.verificaEstoqueSelim()){
                     for(int i=0; i<quantidadeModelo; i++){
-                        Produto novoProduto = new Produto(pedidoAtual.getIdPedido());
 
+                        //Instância do novo produto a ser fabricado
+                        Produto novoProduto = new Produto(pedidoAtual.getIdPedido());
+                        //Método de produção do produto
                         produzModelo(modelo, novoProduto, tecnicos, supervisor);
 
-                        //Testes
+                        //Enquanto o produto não passar no teste, um novo produto será produzido.
                         while(!testarProduto(novoProduto)){
                             System.out.println("Produto de id=" + novoProduto.getId_produto() + "do pedido de id="+ novoProduto.getId_pedido()+" não passou nos testes!\n" +
                                     "A produção será reinicializada.");
@@ -61,7 +68,7 @@ public class LinhaProducao {
                         Estoque.addProdutoNoEstoque(novoProduto);
                     }
                 }
-                it.remove(); // avoids a ConcurrentModificationException
+                it.remove();
             }
         }
     }
@@ -128,24 +135,22 @@ public class LinhaProducao {
         return tecnicos;
     }
 
+    public Pedido getProxPedido() {
+        return filaDePedidos.poll();
+    }
+
+    public static void addPedido(Pedido pedido) {
+        filaDePedidos.addLast(pedido);
+    }
+
+    public Boolean isFilaPedidosVazia() {
+        return filaDePedidos.isEmpty();
+    }
+
     public Supervisor getSupervisor(){
         return new Supervisor("Supervisor Fulano");
     }
 
-    private Boolean verificaEstoqueQuadro(){
-        return true;
-    }
 
-    private Boolean verificaEstoqueSelim(){
-        return true;
-    }
-
-    private Boolean verificaEstoqueRoda(){
-        return true;
-    }
-
-    private Boolean verificaEstoqueGuidao(){
-        return true;
-    }
 
 }
